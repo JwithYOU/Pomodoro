@@ -23,7 +23,13 @@
     "eject": "react-scripts eject",
     "postinstall": "npx husky install",
     "format": "prettier --cache --write",
-    "lint": "eslint --cache"
+    "lint-front": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint --cache .",
+      "prettier --config ./.prettierrc --write -u"
+    ]
   },
   "eslintConfig": {
     "extends": [
@@ -46,6 +52,7 @@
   "devDependencies": {
     "eslint-config-prettier": "^8.8.0",
     "husky": "^8.0.3",
+    "lint-staged": "^13.2.2",
     "prettier": "^2.8.8"
   }
 }
