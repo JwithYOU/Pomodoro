@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter, Navigate, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import SetForm from './pages/SetForm';
 
 function App() {
