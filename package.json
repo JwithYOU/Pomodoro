@@ -23,7 +23,8 @@
     "eject": "react-scripts eject",
     "postinstall": "husky install",
     "format": "prettier --cache --write .",
-    "lint": "eslint --cache ."
+    "lint-front": "lint-staged",
+    "prepare": "husky install"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
