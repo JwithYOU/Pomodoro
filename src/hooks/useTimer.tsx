@@ -17,7 +17,7 @@ const useTimer = ({ initialTime = 25 * 60 }: TimerHookProps): TimerHookReturn =>
   const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
-    let interval: NodeJS.Timeout | null = null;
+    let interval: number | any;
 
     if (isActive && timer > 0) {
       interval = setInterval(() => {

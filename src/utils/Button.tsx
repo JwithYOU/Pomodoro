@@ -6,6 +6,10 @@ interface ButtonProps {
   disabled: boolean;
 }
 
+interface ResetButtonProps {
+  onClick: MouseEventHandler<HTMLButtonElement>;
+}
+
 export const StartButton: FC<ButtonProps> = ({ onClick, disabled }) => (
   <Button variant="contained" color="primary" onClick={onClick} disabled={disabled}>
     Start
@@ -18,7 +22,7 @@ export const PauseButton: FC<ButtonProps> = ({ onClick, disabled }) => (
   </Button>
 );
 
-export const ResetButton: FC<ButtonProps> = ({ onClick }) => (
+export const ResetButton: FC<ResetButtonProps> = ({ onClick }) => (
   <Button variant="contained" onClick={onClick}>
     Reset
   </Button>

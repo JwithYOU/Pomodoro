@@ -1,11 +1,16 @@
-import react, { FC } from 'react';
 import { Container, Typography, Box, Grid } from '@mui/material';
 import { StartButton, PauseButton, ResetButton } from '../utils/Button';
+import TimerDisplay from '../components/TimerDisplay';
+import useTimer from '../hooks/useTimer';
 
 const SetForm = () => {
+  const { timer, isActive, startTimer, pauseTimer, resetTimer } = useTimer({
+    initialTime: 25 * 60,
+  });
+
   return (
     <Container maxWidth="sm">
-      {/* <Box textAlign="center" my={4}>
+      <Box textAlign="center" my={4}>
         <Typography variant="h4" component="h1" gutterBottom>
           Pomodoro Timer
         </Typography>
@@ -28,7 +33,7 @@ const SetForm = () => {
             Click "Start" to begin the Pomodoro timer.
           </Typography>
         )}
-      </Box> */}
+      </Box>
     </Container>
   );
 };
