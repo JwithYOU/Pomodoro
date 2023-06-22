@@ -46,3 +46,5 @@ const useTimer = ({ initialTime = 25 * 60 }: TimerHookProps): TimerHookReturn =>
     resetTimer,
   };
 };
+
+export default useTimer;
