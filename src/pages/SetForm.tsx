@@ -1,19 +1,35 @@
-import * as S from '../styles/SetForm.styled';
-import Button from '@mui/material/Button';
+import react, { FC } from 'react';
+import { Container, Typography, Box, Grid } from '@mui/material';
+import { StartButton, PauseButton, ResetButton } from '../utils/Button';
 
 const SetForm = () => {
   return (
-    <S.FormContainer>
-      <S.FormLabel>유튜브 재생목록:</S.FormLabel>
-      <S.FormInput></S.FormInput>
-      <S.FormLabel>공부 시간</S.FormLabel>
-      <S.FormInput></S.FormInput>
-      <S.FormLabel>쉬는 시간</S.FormLabel>
-      <S.FormInput></S.FormInput>
-      {/* <S.StartButton>시작</S.StartButton>
-       */}
-      <Button variant="contained">Hello World</Button>
-    </S.FormContainer>
+    <Container maxWidth="sm">
+      {/* <Box textAlign="center" my={4}>
+        <Typography variant="h4" component="h1" gutterBottom>
+          Pomodoro Timer
+        </Typography>
+        <TimerDisplay time={timer} />
+        <Box my={2}>
+          <Grid container spacing={2} justifyContent="center">
+            <Grid item>
+              <StartButton onClick={startTimer} disabled={isActive} />
+            </Grid>
+            <Grid item>
+              <PauseButton onClick={pauseTimer} disabled={!isActive} />
+            </Grid>
+            <Grid item>
+              <ResetButton onClick={resetTimer} />
+            </Grid>
+          </Grid>
+        </Box>
+        {!isActive && (
+          <Typography variant="body2" component="p">
+            Click "Start" to begin the Pomodoro timer.
+          </Typography>
+        )}
+      </Box> */}
+    </Container>
   );
 };
 
